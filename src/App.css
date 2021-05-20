@@ -1,5 +1,8 @@
 .App {
+  width: 100;
+  min-height: 100vh;
   text-align: center;
+  background: #ffffff;
 }
 
 .App-logo {
@@ -7,33 +10,137 @@
   pointer-events: none;
 }
 
+.image {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.navbar {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #5e5f6d;
+  font-family: 'Noto Sans JP';
+  border-bottom: 2px solid #f1f1f1;
+}
+
+.Branding {
+  font-size: 38px;
+  font-weight: 500;
+  margin: .5rem;
+}
+
+ul {
+  margin: 0;
+  margin-right: 4rem;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  cursor: pointer;
+  padding: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  font-weight: 500;
+  font-size: 24px;
+  text-decoration: none;
+  color: #ffffff;
+  background: #6C63FF;
+  border: none;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
+  background: #6C63FF;
+}
+
+button:active {
+  transform: translateY(-1px);
+  background: #645de4;
+}
+
+li {
+  list-style: none;
+  padding: 1rem;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+h1 {
+  color: #5e5f6d;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 1em;
+  margin-right: 1em;
+  font-size: 62px;
+}
+
+p {
+  color: #a2a4ad;
+  font-family: 'Noto Sans JP';
+  font-size: 28px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
+    animation: float infinite 5s ease-in-out;
   }
 }
 
 .App-header {
-  min-height: 100vh;
+  min-height: 120vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+.about p {
+  color: #cec5ff;
+  font-weight: 500;
+  text-align: justify;
 }
 
-@keyframes App-logo-float {
+.about h1 {
+  color: #484379;
+  text-align: left;
+}
+
+.about {
+  min-height: 100vh;
+  width: 100;
+  background: #6C63FF;
+  display: grid;
+  padding: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+  align-items: center;
+}
+
+@keyframes float {
   0% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(10px);
+    transform: translateY(6px);
   }
   100% {
     transform: translateY(0px);
+  }
+}
+
+/*desktops and modern laptops*/
+@media screen and (min-width: 1200px) {
+  p {
+    margin: 4px;
   }
 }
