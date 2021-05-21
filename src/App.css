@@ -24,14 +24,14 @@
   justify-content: space-between;
   align-items: baseline;
   color: #5e5f6d;
-  font-family: 'Noto Sans JP';
+  font-family: "Noto Sans JP";
   border-bottom: 2px solid #f1f1f1;
 }
 
 .Branding {
   font-size: 38px;
   font-weight: 500;
-  margin: .5rem;
+  margin: 0.5rem;
 }
 
 ul {
@@ -52,7 +52,7 @@ button {
   font-size: 24px;
   text-decoration: none;
   color: #ffffff;
-  background: #6C63FF;
+  background: #6c63ff;
   border: none;
   border-radius: 4px;
   transition: 0.3s ease;
@@ -62,7 +62,7 @@ button {
 button:hover {
   transform: translateY(-3px);
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
-  background: #6C63FF;
+  background: #6c63ff;
   opacity: 100%;
 }
 
@@ -90,8 +90,9 @@ h1 {
 
 p {
   color: #a2a4ad;
-  font-family: 'Noto Sans JP';
+  font-family: "Noto Sans JP";
   font-size: 28px;
+  margin: 4px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -116,7 +117,7 @@ p {
 }
 
 .about h1 {
-  color: #3f3786;
+  color: #4b457e;
   text-align: center;
   margin: 0;
 }
@@ -124,7 +125,7 @@ p {
 .about {
   min-height: 100vh;
   width: 100;
-  background: #6C63FF;
+  background: #6c63ff;
   display: flex;
   padding: 1.5rem;
   padding-top: 3rem;
@@ -133,6 +134,29 @@ p {
   justify-items: center;
   align-content: space-evenly;
   align-items: center;
+}
+
+.tutorial {
+  min-height: 100vh;
+  width: 100;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  padding-top: 3rem;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+  align-items: center;
+}
+
+.tutorial h1 {
+  margin: 0;
+}
+
+.tutorial p {
+  color: #7c7c96;
+  text-align: left;
 }
 
 @keyframes float {
@@ -149,12 +173,7 @@ p {
 
 /*desktops and modern laptops*/
 @media screen and (min-width: 1200px) {
-  p {
-    margin: 4px;
-  }
-
   .about h1 {
-    color: #3f3786;
     text-align: left;
     margin: 0;
   }
@@ -166,7 +185,18 @@ p {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   }
 
+  .tutorial {
+    text-align: justify;
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
   .about-text {
     width: 80%;
+  }
+
+  .about-text p{
+    text-align: justify;
   }
 }
